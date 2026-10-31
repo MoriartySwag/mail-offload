@@ -51,7 +51,7 @@ Still: this is a delete tool. Keep a backup of the archive folder (Time Machine 
 You need Python 3.9 or newer. Nothing else — no packages, no build step.
 
 ```sh
-git clone https://github.com/yourname/mail-offload
+git clone https://github.com/MoriartySwag/mail-offload
 cd mail-offload
 ./bin/mailoffload --help
 ```
