@@ -1,5 +1,7 @@
 # mailoffload
 
+[![tests](https://github.com/MoriartySwag/mail-offload/actions/workflows/tests.yml/badge.svg)](https://github.com/MoriartySwag/mail-offload/actions/workflows/tests.yml)
+
 Keep a free 15 GB Gmail account working by moving older mail onto your own Mac — with a check that the copy is good before anything leaves Google.
 
 ```
