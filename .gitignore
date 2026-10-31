@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.DS_Store
+
+# Local settings and the archive itself never belong in git.
+mailoffload.ini
+archive/
+*.mbox

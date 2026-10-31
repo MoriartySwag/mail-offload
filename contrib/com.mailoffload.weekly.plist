@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Weekly safety-net run, every Monday at 10:00.
+
+  1. Edit the two paths below so they point at your clone and log file.
+  2. Copy this file to ~/Library/LaunchAgents/com.mailoffload.weekly.plist
+  3. Load it:  launchctl load ~/Library/LaunchAgents/com.mailoffload.weekly.plist
+
+  Your app password is read from ~/.config/mailoffload/config.ini, so it
+  never appears here. The run is a no-op when you are under the trigger.
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.mailoffload.weekly</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/YOU/Projects/mail-offload/bin/mailoffload</string>
+    <string>run</string>
+    <string>--apply</string>
+  </array>
+
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key>
+    <integer>1</integer>
+    <key>Hour</key>
+    <integer>10</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <false/>
+
+  <key>StandardOutPath</key>
+  <string>/Users/YOU/Library/Logs/mailoffload.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/YOU/Library/Logs/mailoffload.log</string>
+</dict>
+</plist>

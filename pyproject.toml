@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mailoffload"
+version = "0.1.0"
+description = "Move older mail off Gmail's servers into a checked local archive, so a free 15 GB account keeps working."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "mailoffload contributors" }]
+keywords = ["gmail", "imap", "archive", "storage", "backup", "email"]
+classifiers = [
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: MacOS",
+  "Programming Language :: Python :: 3",
+  "Topic :: Communications :: Email",
+]
+
+[project.scripts]
+mailoffload = "mailoffload.cli:main"
+
+[tool.setuptools]
+packages = ["mailoffload"]
